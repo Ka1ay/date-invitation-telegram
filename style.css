@@ -24,6 +24,34 @@ object-fit:cover;
 border-radius:25px;
 }
 
+.foods{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.food{
+border:2px solid #f3bfd1;
+border-radius:20px;
+padding:20px;
+font-size:20px;
+cursor:pointer;
+background:white;
+transition:0.3s;
+}
+
+
+.food:hover{
+transform:scale(1.05);
+}
+
+
+.food.selected{
+background:#eb6b98;
+color:white;
+border-color:#eb6b98;
+}
+
 button{
 background:#eb6b98;
 color:white;
