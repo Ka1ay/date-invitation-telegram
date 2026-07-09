@@ -13,8 +13,20 @@ document.getElementById("choice")
 
 }
 
-function selectFood(value){
- food=value;
+function selectFood(element,value){
+
+food=value;
+
+
+document
+.querySelectorAll(".food")
+.forEach(item=>{
+item.classList.remove("selected");
+});
+
+
+element.classList.add("selected");
+
 }
 
 document.getElementById("no").onclick=function(){
