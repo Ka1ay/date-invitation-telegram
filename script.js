@@ -1,71 +1,129 @@
 const BOT_TOKEN="8838298808:AAGTjAeVVZouKhWOAZ-fANRMQBxmIX6VhaA";
 const CHAT_ID="663351088";
 
-let food="";
 
-function accept(){
+let selectedFood = "";
 
-document.getElementById("dateBlock")
-.classList.remove("hidden");
 
-document.getElementById("choice")
-.classList.remove("hidden");
+
+// переключение экранов
+
+function nextScreen(number) {
+
+    document
+    .querySelectorAll(".screen")
+    .forEach(screen => {
+
+        screen.classList.add("hidden");
+
+    });
+
+
+    document
+    .getElementById("screen" + number)
+    .classList.remove("hidden");
 
 }
 
-function selectFood(element,value){
 
-food=value;
 
+// выбор еды
+
+function selectFood(element, food) {
+
+
+    selectedFood = food;
+
+
+    document
+    .querySelectorAll(".food")
+    .forEach(item => {
+
+        item.classList.remove("selected");
+
+    });
+
+
+    element.classList.add("selected");
+
+}
+
+
+
+// кнопка нет убегает
 
 document
-.querySelectorAll(".food")
-.forEach(item=>{
-item.classList.remove("selected");
-});
+.getElementById("no")
+.onclick = function(){
 
 
-element.classList.add("selected");
+    this.innerHTML = "Подумай еще ❤️";
 
-}
 
-document.getElementById("no").onclick=function(){
- this.innerHTML="Подумай еще ❤️";
- this.style.position="absolute";
- this.style.left=Math.random()*70+"%";
- this.style.top=Math.random()*70+"%";
-}
+    this.style.position = "absolute";
+
+
+    this.style.left =
+    Math.random()*70 + "%";
+
+
+    this.style.top =
+    Math.random()*70 + "%";
+
+
+};
+
+
+
+
+
+// финальное подтверждение
+
 
 async function finish(){
 
-let date=document.getElementById("date").value;
-let time=document.getElementById("time").value;
+
+    let date =
+    document.getElementById("date").value;
 
 
-let text=
-"❤️ Сабина согласилась!%0A"+
-"📅 Дата: "+date+"%0A"+
-"⏰ Время: "+time+"%0A"+
-"🍓 Выбрала: "+food;
+    let time =
+    document.getElementById("time").value;
 
-if(!BOT_TOKEN.includes("ВСТАВЬ")){
- await fetch(
- `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`
- );
-}
 
-document.getElementById("screen").innerHTML=
-`
-<img src="images/sunset.jpg" class="photo">
 
-<h1>Спасибо, Сабина ❤️</h1>
+    let message =
 
-<p>
-Я очень жду нашу встречу.<br><br>
-Я хочу встречать рассвет<br>
-в твоих глазах ❤️
-</p>
+`❤️ Сабина согласилась!
 
-<img src="images/memory.jpg" class="photo">
-`;
+📅 Дата:
+${date}
+
+⏰ Время:
+${time}
+
+🍓 Возьмем:
+${selectedFood}`;
+
+
+
+    // отправка в Telegram
+
+    if(!BOT_TOKEN.includes("ВСТАВЬ")){
+
+
+        await fetch(
+
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`
+
+        );
+
+
+    }
+
+
+
+    nextScreen(4);
+
+
 }
