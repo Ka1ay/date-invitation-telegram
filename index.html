@@ -1,42 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Сабина ❤️</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-<div class="card" id="screen">
+
+<div class="card">
+
+
+
+<div id="screen1" class="screen">
+
 <img src="images/cats.jpg" class="photo">
+
 
 <h1>Сабина ❤️</h1>
 
-<p class="text">
+
+<p>
 Я хочу встречать рассвет<br>
 в твоих глазах ❤️
 </p>
 
-<h2>Пойдешь со мной на свидание?</h2>
-<div id="dateBlock" class="hidden">
 
-<h3>Когда ты свободна? ❤️</h3>
+<h2>
+Пойдешь со мной на свидание?
+</h2>
 
-<label>Дата</label>
-<input type="date" id="date">
 
-<label>Время</label>
-<input type="time" id="time">
+<button onclick="nextScreen(2)">
+Да ❤️
+</button>
+
+
+<button id="no">
+Нет 😢
+</button>
+
 
 </div>
-<button onclick="accept()">Да ❤️</button>
-<button id="no">Нет 😢</button>
 
-<div id="choice" class="hidden">
-<h3>Что возьмем с собой? ❤️</h3>
+
+
+
+
+<div id="screen2" class="screen hidden">
+
+
+<img src="images/cats.jpg" class="photo">
+
+
+<h1>
+Когда ты свободна? ❤️
+</h1>
+
+
+<label>
+Дата
+</label>
+
+<input type="date" id="date">
+
+
+<label>
+Время
+</label>
+
+<input type="time" id="time">
+
+
+<br>
+
+
+<button onclick="nextScreen(3)">
+Выбрать дату ❤️
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="screen3" class="screen hidden">
+
+
+<h1>
+Что возьмем с собой? 🍓
+</h1>
+
 
 <div class="foods">
+
 
 <div class="food" onclick="selectFood(this,'🍓 Клубника')">
 🍓
@@ -44,11 +110,15 @@
 Клубника
 </div>
 
+
+
 <div class="food" onclick="selectFood(this,'🍫 Шоколад')">
 🍫
 <br>
 Шоколад
 </div>
+
+
 
 <div class="food" onclick="selectFood(this,'🍬 Мармеладки')">
 🍬
@@ -56,20 +126,64 @@
 Мармеладки
 </div>
 
+
+
 <div class="food" onclick="selectFood(this,'🥔 Чипсы')">
 🥔
 <br>
 Чипсы
 </div>
 
-</div>
-
-<br>
-<button onclick="finish()">Подтвердить ❤️</button>
-</div>
 
 </div>
+
+
+
+<button onclick="finish()">
+Готово ❤️
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div id="screen4" class="screen hidden">
+
+
+<img src="images/sunset.jpg" class="photo">
+
+
+<h1>
+Спасибо, Сабина ❤️
+</h1>
+
+
+<p>
+Буду ждать нашу встречу.
+
+
+<br><br>
+
+
+Я хочу встречать рассвет
+в твоих глазах ❤️
+</p>
+
+
+</div>
+
+
+
+</div>
+
 
 <script src="script.js"></script>
+
+
 </body>
+
 </html>
