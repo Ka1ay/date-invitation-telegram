@@ -1,5 +1,5 @@
-const BOT_TOKEN="ВСТАВЬ_ТОКЕН";
-const CHAT_ID="ВСТАВЬ_ID";
+const BOT_TOKEN="8838298808:AAGTjAeVVZouKhWOAZ-fANRMQBxmIX6VhaA";
+const CHAT_ID="663351088";
 
 let food="";
 
