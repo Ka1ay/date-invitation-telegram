@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сабина ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card" id="screen">
+<img src="images/cats.jpg" class="photo">
+
+<h1>Сабина ❤️</h1>
+
+<p class="text">
+Я хочу встречать рассвет<br>
+в твоих глазах ❤️
+</p>
+
+<h2>Пойдешь со мной на свидание?</h2>
+
+<button onclick="accept()">Да ❤️</button>
+<button id="no">Нет 😢</button>
+
+<div id="choice" class="hidden">
+<h3>Что возьмем с собой? ❤️</h3>
+
+<button onclick="selectFood('🍓 Клубника')">🍓 Клубника</button>
+<button onclick="selectFood('🍫 Шоколад')">🍫 Шоколад</button>
+<button onclick="selectFood('🍬 Мармеладки')">🍬 Мармеладки</button>
+<button onclick="selectFood('🥔 Чипсы')">🥔 Чипсы</button>
+
+<br>
+<button onclick="finish()">Подтвердить ❤️</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
