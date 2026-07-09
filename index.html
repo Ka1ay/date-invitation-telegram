@@ -36,10 +36,33 @@
 <div id="choice" class="hidden">
 <h3>Что возьмем с собой? ❤️</h3>
 
-<button onclick="selectFood('🍓 Клубника')">🍓 Клубника</button>
-<button onclick="selectFood('🍫 Шоколад')">🍫 Шоколад</button>
-<button onclick="selectFood('🍬 Мармеладки')">🍬 Мармеладки</button>
-<button onclick="selectFood('🥔 Чипсы')">🥔 Чипсы</button>
+<div class="foods">
+
+<div class="food" onclick="selectFood(this,'🍓 Клубника')">
+🍓
+<br>
+Клубника
+</div>
+
+<div class="food" onclick="selectFood(this,'🍫 Шоколад')">
+🍫
+<br>
+Шоколад
+</div>
+
+<div class="food" onclick="selectFood(this,'🍬 Мармеладки')">
+🍬
+<br>
+Мармеладки
+</div>
+
+<div class="food" onclick="selectFood(this,'🥔 Чипсы')">
+🥔
+<br>
+Чипсы
+</div>
+
+</div>
 
 <br>
 <button onclick="finish()">Подтвердить ❤️</button>
