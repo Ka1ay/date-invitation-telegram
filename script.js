@@ -175,3 +175,52 @@ function createHeart(){
 
 
 setInterval(createHeart,500);
+
+const music =
+document.getElementById("music");
+
+
+const musicBtn =
+document.getElementById("musicBtn");
+
+
+
+let playing = false;
+
+
+
+musicBtn.onclick = function(){
+
+
+if(!playing){
+
+
+    music.play();
+
+
+    musicBtn.innerHTML =
+    "🔇 Выключить музыку";
+
+
+    playing=true;
+
+
+}
+
+else{
+
+
+    music.pause();
+
+
+    musicBtn.innerHTML =
+    "🎵 Включить музыку";
+
+
+    playing=false;
+
+
+}
+
+
+};
