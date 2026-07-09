@@ -4,7 +4,13 @@ const CHAT_ID="663351088";
 let food="";
 
 function accept(){
- document.getElementById("choice").classList.remove("hidden");
+
+document.getElementById("dateBlock")
+.classList.remove("hidden");
+
+document.getElementById("choice")
+.classList.remove("hidden");
+
 }
 
 function selectFood(value){
