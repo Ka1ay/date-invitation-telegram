@@ -265,3 +265,34 @@ label {
 
 
 }
+
+#musicBtn {
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    background:#e86b98;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+
+#musicBtn:hover {
+
+    transform:scale(1.05);
+
+}
