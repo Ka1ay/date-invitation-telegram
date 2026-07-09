@@ -38,9 +38,15 @@ document.getElementById("no").onclick=function(){
 
 async function finish(){
 
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+
+
 let text=
 "❤️ Сабина согласилась!%0A"+
-"Выбрала: "+food;
+"📅 Дата: "+date+"%0A"+
+"⏰ Время: "+time+"%0A"+
+"🍓 Выбрала: "+food;
 
 if(!BOT_TOKEN.includes("ВСТАВЬ")){
  await fetch(
